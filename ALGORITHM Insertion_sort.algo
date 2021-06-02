@@ -1,0 +1,21 @@
+ALGORITHM Insertion_sort 
+VAR
+    i : INTEGER;
+    j : INTEGER;
+    tmp : INTEGER ;
+    Arr : ARRAY_OF INTEGER[];
+BEGIN
+    j := 2 ;
+    WHILE (j< Arr.length) DO
+         tmp := Arr[j] ;
+         i := j-1 ;
+          FOR i FROM 0 TO Arr.length-1 STEP 1 DO
+            IF ( Arr[i]> tmp) THEN
+                Arr[i+1] := Arr[i] ;
+                i := i-1;    
+            END_IF
+          tmp:= Arr[i+1];  
+          j:=j+1 ;  
+          END_FOR
+    END_WHILE ( ) 
+END
